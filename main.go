@@ -1,7 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"net/http"
+)
 
-func main() {
-	fmt.Println("Hey its working fine")
+func handlerFunc(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprint(w, "<h1>Fuck this shit server you shit.</h1>")
+}
+
+func main(){
+	http.HandleFunc("/", handlerFunc)
+	http.ListenAndServe(":3000", nil)
 }

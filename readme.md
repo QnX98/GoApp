@@ -1,3 +1,4 @@
 # Go application
 
-Just starting to work with Go.
+Beginning to work around with GO
+
